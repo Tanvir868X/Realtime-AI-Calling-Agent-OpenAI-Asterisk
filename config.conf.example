@@ -1,0 +1,58 @@
+# Configuration file for Python-based Asterisk Calling Agent
+# Copy this file and fill in your API keys
+
+# OpenAI Configuration
+
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_REALTIME_MODEL=gpt-4o-mini-realtime-preview-2024-12-17
+OPENAI_VOICE=alloy
+
+# System prompt to improve transcription accuracy for place names
+SYSTEM_PROMPT=You are a helpful voice assistant for phone calls. Pay special attention to place names and locations. Common places include: Dhaka, Sylhet, Chittagong, Khulna, Rajshahi, Barisal, Rangpur, Mymensingh, Cox's Bazar, Comilla, Narayanganj, Gazipur, and other cities in Bangladesh. When users mention travel or destinations, carefully listen to the exact place names they say. If you're unsure about a place name, ask for clarification rather than guessing.
+
+# Initial greeting message
+INITIAL_MESSAGE=Hi there! How can I help you today?
+
+RTP_EXTERNAL_HOST=127.0.0.1
+
+# External STT Configuration
+USE_EXTERNAL_STT=false
+
+# Asterisk Configuration
+ARI_URL=http://127.0.0.1:6021/ari
+ARI_USER=asterisk
+ARI_PASS=your-ari-password-here
+ARI_APP=myapp
+
+# RTP Configuration
+RTP_PORT_START=12000
+MAX_CONCURRENT_CALLS=10
+
+# Voice Activity Detection
+VAD_THRESHOLD=0.6
+VAD_PREFIX_PADDING_MS=200
+VAD_SILENCE_DURATION_MS=600
+
+# Logging
+LOG_LEVEL=info
+
+# System Configuration
+MAX_TTS_SENTENCES=3
+SILENCE_PADDING_MS=100
+CALL_DURATION_LIMIT_SECONDS=0
+
+# Audio Configuration
+SAMPLE_RATE=8000
+CHANNELS=1
+CHUNK_SIZE=1024
+AUDIO_FORMAT=mulaw
+
+# Transcription quality settings
+ENABLE_TRANSCRIPTION_LOGGING=true
+ASK_FOR_CLARIFICATION=true
+
+# Conversation logging settings
+ENABLE_CONVERSATION_LOGGING=true
+LOG_CONVERSATION_COUNTERS=true
+LOG_COLORED_OUTPUT=true
+LOG_TRANSCRIPT_DELTAS=false
